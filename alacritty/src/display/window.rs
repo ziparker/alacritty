@@ -402,7 +402,7 @@ impl Window {
     }
 
     pub fn set_urgent(&self, is_urgent: bool) {
-        let attention = if is_urgent { Some(UserAttentionType::Critical) } else { None };
+        let attention = None; //if is_urgent { Some(UserAttentionType::Critical) } else { None };
 
         self.window().request_user_attention(attention);
     }
